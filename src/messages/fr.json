@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "title": "Obrii Studio — Production Vidéo & Agence Médias Sociaux",
+    "description": "Nous créons du contenu vidéo captivant et des stratégies de médias sociaux pour les entreprises et les particuliers."
+  },
+  "nav": {
+    "home": "Accueil",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "instagram": "Instagram"
+  },
+  "hero": {
+    "headline": "Nous Créons des Histoires Visuelles Qui Émeuvent",
+    "subheadline": "Production vidéo et contenu pour les réseaux sociaux pour les marques qui refusent de se fondre dans la masse.",
+    "cta": "Lancez Votre Projet"
+  },
+  "manifesto": {
+    "title": "Notre Philosophie",
+    "text": "Chaque marque a une histoire qui mérite d'être racontée. Nous ne produisons pas simplement du contenu — nous sculptons des expériences visuelles qui résonnent, inspirent et convertissent. Dans un monde noyé dans le bruit, nous créons le signal."
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Des services conçus avec précision pour les marques qui exigent l'excellence.",
+    "video": {
+      "title": "Production Vidéo",
+      "description": "Du concept au montage final. Films commerciaux, vidéos de marque, présentations de produits et couverture d'événements qui captivent votre audience.",
+      "features": [
+        "Films de Marque & Commerciaux",
+        "Présentations de Produits",
+        "Couverture d'Événements",
+        "Motion Graphics"
+      ]
+    },
+    "social": {
+      "title": "Contenu Réseaux Sociaux",
+      "description": "Du contenu conçu pour capter l'attention. Reels, stories et publications pensés pour développer votre présence digitale.",
+      "features": [
+        "Instagram Reels & Stories",
+        "Contenu TikTok",
+        "YouTube Shorts",
+        "Calendriers de Contenu"
+      ]
+    },
+    "smm": {
+      "title": "Gestion des Réseaux Sociaux",
+      "description": "Stratégie complète sur les réseaux sociaux. Nous planifions, créons, publions et analysons — pour que vous puissiez vous concentrer sur votre activité.",
+      "features": [
+        "Stratégie & Planification",
+        "Gestion de Communauté",
+        "Analytique & Rapports",
+        "Support Campagnes Pub"
+      ]
+    }
+  },
+  "featuredWork": {
+    "title": "Projets en Vedette",
+    "subtitle": "Une sélection de projets qui illustrent notre savoir-faire.",
+    "viewAll": "Voir Tous les Projets",
+    "viewProject": "Voir le Projet"
+  },
+  "process": {
+    "title": "Notre Processus",
+    "subtitle": "Un workflow transparent et collaboratif conçu pour livrer des résultats.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Briefing",
+        "description": "Nous écoutons. Comprendre vos objectifs, votre audience et votre vision est la base de tout grand projet."
+      },
+      {
+        "number": "02",
+        "title": "Production",
+        "description": "Les caméras tournent. Notre équipe donne vie à la vision créative avec un équipement professionnel et une direction expérimentée."
+      },
+      {
+        "number": "03",
+        "title": "Post-Production",
+        "description": "La magie opère. Montage, étalonnage, design sonore et motion graphics transforment les rushes en œuvre d'art."
+      },
+      {
+        "number": "04",
+        "title": "Livraison",
+        "description": "Prêt au lancement. Fichiers finaux optimisés pour chaque plateforme, avec des révisions jusqu'à votre entière satisfaction."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Forfaits",
+    "subtitle": "Tarification transparente. Pas de frais cachés.",
+    "currency": "$",
+    "cta": "Commencer",
+    "custom": "Besoin de quelque chose sur mesure ?",
+    "customCta": "Parlons-en",
+    "packages": [
+      {
+        "name": "Starter",
+        "price": "1 500",
+        "description": "Parfait pour les petites entreprises qui débutent avec la vidéo.",
+        "features": [
+          "1 Vidéo (jusqu'à 60 secondes)",
+          "Étalonnage de base",
+          "2 tours de révision",
+          "Livraison en 7 jours",
+          "1 format de plateforme"
+        ]
+      },
+      {
+        "name": "Professionnel",
+        "price": "3 500",
+        "popular": true,
+        "description": "Pour les marques prêtes à faire une impression.",
+        "features": [
+          "3 Vidéos (jusqu'à 90 sec. chacune)",
+          "Étalonnage professionnel",
+          "Design sonore & musique",
+          "3 tours de révision",
+          "Livraison en 14 jours",
+          "Formats multi-plateformes"
+        ]
+      },
+      {
+        "name": "Entreprise",
+        "price": "7 000",
+        "description": "Production à grande échelle pour les marques sérieuses.",
+        "features": [
+          "5+ Vidéos (durée personnalisée)",
+          "Étalonnage cinématographique",
+          "Design sonore & musique sur mesure",
+          "Révisions illimitées",
+          "Livraison prioritaire",
+          "Tous les formats de plateforme",
+          "Bundle contenu réseaux sociaux"
+        ]
+      }
+    ]
+  },
+  "personalCta": {
+    "title": "Créons Quelque Chose de Grand Ensemble",
+    "text": "Vous avez un projet en tête ? Nous serions ravis d'en discuter autour d'un café — virtuel ou en personne.",
+    "cta": "Discutons Autour d'un Café ☕"
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "subtitle": "Parlez-nous de votre projet. Nous vous répondrons dans les 24 heures.",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Adresse E-mail",
+      "projectType": "Type de Projet",
+      "projectTypes": {
+        "video": "Production Vidéo",
+        "social": "Contenu Réseaux Sociaux",
+        "smm": "Gestion des Réseaux Sociaux",
+        "bundle": "Forfait Complet",
+        "other": "Autre"
+      },
+      "budget": "Gamme de Budget",
+      "budgetRanges": {
+        "starter": "1 000 $ – 2 500 $",
+        "mid": "2 500 $ – 5 000 $",
+        "premium": "5 000 $ – 10 000 $",
+        "enterprise": "10 000 $+"
+      },
+      "timeline": "Délai",
+      "timelines": {
+        "urgent": "Moins de 2 semaines",
+        "normal": "2–4 semaines",
+        "relaxed": "1–2 mois",
+        "flexible": "Flexible"
+      },
+      "description": "Description du Projet",
+      "descriptionPlaceholder": "Parlez-nous de votre projet, vos objectifs et les références qui vous inspirent...",
+      "submit": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé ! Nous vous contacterons bientôt.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    }
+  },
+  "portfolio": {
+    "title": "Nos Réalisations",
+    "subtitle": "Chaque projet raconte une histoire. Voici les nôtres.",
+    "filterAll": "Tous",
+    "filterVideo": "Vidéo",
+    "filterSocial": "Réseaux Sociaux",
+    "filterSmm": "SMM",
+    "noProjects": "Aucun projet trouvé dans cette catégorie."
+  },
+  "project": {
+    "problem": "Le Défi",
+    "solution": "Notre Solution",
+    "gallery": "Galerie du Projet",
+    "relatedWork": "Projets Connexes",
+    "backToPortfolio": "← Retour au Portfolio"
+  },
+  "instagram": {
+    "title": "Suivez Notre Parcours",
+    "subtitle": "Coulisses, dernières réalisations et inspiration créative.",
+    "placeholder": "L'intégration du flux Instagram arrive bientôt.",
+    "followUs": "Suivez-nous sur Instagram"
+  },
+  "footer": {
+    "tagline": "Créer des histoires visuelles qui émeuvent.",
+    "navigation": "Navigation",
+    "getInTouch": "Nous Contacter",
+    "followUs": "Suivez-Nous",
+    "rights": "Tous droits réservés."
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "title": "Obrii Studio — Video Production & Social Media Agency",
+    "description": "We create stunning video content and social media strategies for businesses and individuals."
+  },
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "instagram": "Instagram"
+  },
+  "hero": {
+    "headline": "We Craft Visual Stories That Move People",
+    "subheadline": "Video production & social media content for brands that refuse to blend in.",
+    "cta": "Start Your Project"
+  },
+  "manifesto": {
+    "title": "Our Philosophy",
+    "text": "Every brand has a story worth telling. We don't just produce content — we sculpt visual experiences that resonate, inspire, and convert. In a world drowning in noise, we create signal."
+  },
+  "services": {
+    "title": "What We Do",
+    "subtitle": "Precision-crafted services for brands that demand excellence.",
+    "video": {
+      "title": "Video Production",
+      "description": "From concept to final cut. Commercial videos, brand films, product showcases, and event coverage that captivate your audience.",
+      "features": [
+        "Brand & Commercial Films",
+        "Product Showcases",
+        "Event Coverage",
+        "Motion Graphics"
+      ]
+    },
+    "social": {
+      "title": "Social Media Content",
+      "description": "Scroll-stopping content engineered for engagement. Reels, stories, and posts designed to grow your digital presence.",
+      "features": [
+        "Instagram Reels & Stories",
+        "TikTok Content",
+        "YouTube Shorts",
+        "Content Calendars"
+      ]
+    },
+    "smm": {
+      "title": "Social Media Management",
+      "description": "Full-cycle social media strategy. We plan, create, publish, and analyze — so you can focus on your business.",
+      "features": [
+        "Strategy & Planning",
+        "Community Management",
+        "Analytics & Reporting",
+        "Ad Campaign Support"
+      ]
+    }
+  },
+  "featuredWork": {
+    "title": "Featured Work",
+    "subtitle": "Selected projects that showcase our craft.",
+    "viewAll": "View All Projects",
+    "viewProject": "View Project"
+  },
+  "process": {
+    "title": "Our Process",
+    "subtitle": "A transparent, collaborative workflow designed to deliver results.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Briefing",
+        "description": "We listen. Understanding your goals, audience, and vision is the foundation of every great project."
+      },
+      {
+        "number": "02",
+        "title": "Production",
+        "description": "Cameras roll. Our team brings the creative vision to life with professional equipment and experienced direction."
+      },
+      {
+        "number": "03",
+        "title": "Post-Production",
+        "description": "The magic happens. Editing, color grading, sound design, and motion graphics transform raw footage into art."
+      },
+      {
+        "number": "04",
+        "title": "Delivery",
+        "description": "Launch ready. Final files optimized for every platform, with revisions until you're completely satisfied."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Packages",
+    "subtitle": "Transparent pricing. No hidden fees.",
+    "currency": "$",
+    "cta": "Get Started",
+    "custom": "Need something custom?",
+    "customCta": "Let's Talk",
+    "packages": [
+      {
+        "name": "Starter",
+        "price": "1,500",
+        "description": "Perfect for small businesses starting with video.",
+        "features": [
+          "1 Video (up to 60 seconds)",
+          "Basic color grading",
+          "2 revision rounds",
+          "Delivery in 7 days",
+          "1 platform format"
+        ]
+      },
+      {
+        "name": "Professional",
+        "price": "3,500",
+        "popular": true,
+        "description": "For brands ready to make an impact.",
+        "features": [
+          "3 Videos (up to 90 seconds each)",
+          "Professional color grading",
+          "Sound design & music",
+          "3 revision rounds",
+          "Delivery in 14 days",
+          "Multi-platform formats"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "7,000",
+        "description": "Full-scale production for serious brands.",
+        "features": [
+          "5+ Videos (custom length)",
+          "Cinema-grade color grading",
+          "Custom sound design & music",
+          "Unlimited revisions",
+          "Priority delivery",
+          "All platform formats",
+          "Social media content bundle"
+        ]
+      }
+    ]
+  },
+  "personalCta": {
+    "title": "Let's Create Something Great Together",
+    "text": "Have a project in mind? We'd love to hear about it over a cup of coffee — virtual or in person.",
+    "cta": "Let's Talk Over Coffee ☕"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Tell us about your project. We'll get back to you within 24 hours.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "projectType": "Project Type",
+      "projectTypes": {
+        "video": "Video Production",
+        "social": "Social Media Content",
+        "smm": "Social Media Management",
+        "bundle": "Full Package",
+        "other": "Other"
+      },
+      "budget": "Budget Range",
+      "budgetRanges": {
+        "starter": "$1,000 – $2,500",
+        "mid": "$2,500 – $5,000",
+        "premium": "$5,000 – $10,000",
+        "enterprise": "$10,000+"
+      },
+      "timeline": "Timeline",
+      "timelines": {
+        "urgent": "Less than 2 weeks",
+        "normal": "2–4 weeks",
+        "relaxed": "1–2 months",
+        "flexible": "Flexible"
+      },
+      "description": "Project Description",
+      "descriptionPlaceholder": "Tell us about your project, goals, and any references you like...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent! We'll be in touch soon.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "Every project tells a story. Here are ours.",
+    "filterAll": "All",
+    "filterVideo": "Video",
+    "filterSocial": "Social Media",
+    "filterSmm": "SMM",
+    "noProjects": "No projects found in this category."
+  },
+  "project": {
+    "problem": "The Challenge",
+    "solution": "Our Solution",
+    "gallery": "Project Gallery",
+    "relatedWork": "Related Work",
+    "backToPortfolio": "← Back to Portfolio"
+  },
+  "instagram": {
+    "title": "Follow Our Journey",
+    "subtitle": "Behind the scenes, latest work, and creative inspiration.",
+    "placeholder": "Instagram feed integration coming soon.",
+    "followUs": "Follow Us on Instagram"
+  },
+  "footer": {
+    "tagline": "Crafting visual stories that move people.",
+    "navigation": "Navigation",
+    "getInTouch": "Get In Touch",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved."
+  }
+}
