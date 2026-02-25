@@ -6,3 +6,12 @@ export const client = createClient({
   apiVersion: "2024-01-01",
   useCdn: true,
 });
+
+// Server-side client: bypasses CDN for fresh data, supports token auth
+export const serverClient = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "placeholder",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
+  apiVersion: "2024-01-01",
+  useCdn: false,
+  token: process.env.SANITY_API_READ_TOKEN,
+});
