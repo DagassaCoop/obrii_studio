@@ -1,46 +1,47 @@
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative flex min-h-[100vh] items-center justify-center overflow-hidden">
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/80" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.03)_0%,transparent_70%)]" />
+    <section className="bg-section-primary min-h-[100vh] flex items-center">
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-12 lg:px-20 pt-32 pb-24">
 
-      {/* Grid pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      />
-
-      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-        <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          {t("headline")}
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-          {t("subheadline")}
+        {/* Overline */}
+        <p className="text-overline mb-8 tracking-[0.18em]">
+          Creative Studio
         </p>
-        <div className="mt-10">
-          <Link href="/contact">
-            <Button size="lg" className="group rounded-full px-8 text-base">
-              {t("cta")}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
-        </div>
-      </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        {/* Headline — large serif, left-aligned */}
+        <h1 className="max-w-4xl text-[clamp(3rem,8vw,6.5rem)] leading-[1.05] tracking-tight text-graphite">
+          We craft visual stories that{" "}
+          <em className="not-italic font-light italic">resonate</em>
+        </h1>
+
+        {/* Subheadline */}
+        <p className="mt-8 max-w-lg text-[1.0625rem] leading-relaxed text-graphite/70">
+          A boutique video production and social media agency dedicated to
+          elevating brands through meticulous craftsmanship and timeless
+          aesthetics.
+        </p>
+
+        {/* CTAs */}
+        <div className="mt-12 flex flex-wrap items-center gap-4">
+          <a
+            href="/#work"
+            className="rounded-full bg-terracotta px-8 py-3.5 text-[0.9375rem] font-medium text-white tracking-wide transition-all duration-200 ease-in-out hover:bg-burnt-earth active:scale-[0.97]"
+          >
+            View Our Work
+          </a>
+          <a
+            href="/#process"
+            className="rounded-full border border-graphite/25 px-8 py-3.5 text-[0.9375rem] font-medium text-graphite tracking-wide transition-all duration-200 ease-in-out hover:border-graphite/50 hover:bg-graphite/5 active:scale-[0.97]"
+          >
+            Our Process
+          </a>
+        </div>
+
+      </div>
     </section>
   );
 }

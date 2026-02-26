@@ -1,113 +1,120 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
-import { useLocale } from "next-intl";
-import { useRouter } from "@/i18n/navigation";
-import { Button } from "@/components/ui/button";
+import { Link, useRouter, usePathname } from "@/i18n/navigation";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Menu, Globe } from "lucide-react";
+import { Globe, Menu } from "lucide-react";
 import { useState } from "react";
+import { useLocale } from "next-intl";
+import { routing } from "@/i18n/routing";
 
 const navItems = [
-  { key: "home", href: "/" },
-  { key: "portfolio", href: "/portfolio" },
-  { key: "contact", href: "/contact" },
-  { key: "instagram", href: "/instagram" },
+  { label: "Work", href: "/#work" },
+  { label: "Services", href: "/#services" },
+  { label: "Process", href: "/#process" },
+  { label: "Pricing", href: "/#pricing" },
 ] as const;
 
-export function Header() {
-  const t = useTranslations("nav");
-  const pathname = usePathname();
+function LocaleSwitcher() {
   const locale = useLocale();
   const router = useRouter();
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
-  const toggleLocale = () => {
-    const newLocale = locale === "en" ? "fr" : "en";
-    router.replace(pathname as any, { locale: newLocale });
-  };
+  const otherLocale = routing.locales.find((l) => l !== locale) ?? "en";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/75 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+    <button
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      onClick={() => router.replace(pathname as any, { locale: otherLocale })}
+      aria-label={`Switch to ${otherLocale.toUpperCase()}`}
+      className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors duration-200"
+    >
+      <Globe className="h-[15px] w-[15px]" strokeWidth={1.5} />
+      <span className="text-[11px] font-medium tracking-widest uppercase">
+        {otherLocale}
+      </span>
+    </button>
+  );
+}
+
+export function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-terracotta">
+      <div className="mx-auto flex h-[60px] max-w-7xl items-center justify-between px-6">
+
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          OBRII<span className="text-muted-foreground">.</span>
+        <Link href="/" className="flex flex-col justify-center leading-none">
+          <span className="text-[15px] font-bold tracking-[0.2em] text-white uppercase">
+            OBRII<span className="font-light">STUDIO</span>
+          </span>
+          <span className="text-[10px] tracking-wide text-white/60 mt-0.5">
+            Content beyond the frame.
+          </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-8 md:flex">
+        {/* Desktop Navigation — centered absolutely */}
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
           {navItems.map((item) => (
-            <Link
-              key={item.key}
+            <a
+              key={item.label}
               href={item.href}
-              className={`text-sm tracking-wide transition-colors hover:text-foreground ${pathname === item.href
-                ? "text-foreground"
-                : "text-muted-foreground"
-                }`}
+              className="text-sm text-white/80 hover:text-white transition-colors tracking-wide"
             >
-              {t(item.key)}
-            </Link>
+              {item.label}
+            </a>
           ))}
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden items-center gap-3 md:flex">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleLocale}
-            className="gap-2 text-muted-foreground hover:text-foreground"
+        <div className="hidden md:flex items-center gap-6">
+          <LocaleSwitcher />
+          <Link
+            href="/contact"
+            className="text-sm text-white border border-white/70 hover:border-white hover:bg-white/10 transition-all rounded-full px-5 py-1.5 tracking-wide"
           >
-            <Globe className="h-4 w-4" />
-            {locale.toUpperCase()}
-          </Button>
-          <Link href="/contact">
-            <Button size="sm" className="rounded-full px-6">
-              {t("contact")}
-            </Button>
+            Start a Project
           </Link>
         </div>
 
         {/* Mobile Menu */}
         <div className="flex items-center gap-2 md:hidden">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleLocale}
-            className="text-muted-foreground"
-          >
-            <Globe className="h-4 w-4" />
-          </Button>
+          <LocaleSwitcher />
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <button className="text-white p-1">
                 <Menu className="h-5 w-5" />
-              </Button>
+              </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72">
-              <SheetTitle className="text-left text-lg font-bold tracking-tight">
-                OBRII<span className="text-muted-foreground">.</span>
+            <SheetContent side="right" className="w-72 bg-terracotta border-white/10">
+              <SheetTitle className="text-left">
+                <span className="text-[15px] font-bold tracking-[0.2em] text-white uppercase">
+                  OBRII<span className="font-light">STUDIO</span>
+                </span>
               </SheetTitle>
-              <nav className="mt-8 flex flex-col gap-4">
+              <nav className="mt-8 flex flex-col gap-5">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.key}
+                  <a
+                    key={item.label}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`text-lg transition-colors hover:text-foreground ${pathname === item.href
-                      ? "text-foreground"
-                      : "text-muted-foreground"
-                      }`}
+                    className="text-lg text-white/80 hover:text-white transition-colors"
                   >
-                    {t(item.key)}
-                  </Link>
+                    {item.label}
+                  </a>
                 ))}
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileOpen(false)}
+                  className="mt-4 text-sm text-white border border-white/70 hover:border-white hover:bg-white/10 transition-all rounded-full px-5 py-2 text-center tracking-wide"
+                >
+                  Start a Project
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
         </div>
+
       </div>
     </header>
   );
