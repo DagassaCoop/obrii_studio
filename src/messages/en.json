@@ -5,14 +5,23 @@
   },
   "nav": {
     "home": "Home",
+    "work": "Work",
+    "services": "Services",
+    "process": "Process",
+    "pricing": "Pricing",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "cta": "Start a Project",
+    "tagline": "Content beyond the frame."
   },
   "hero": {
-    "headline": "We Craft Visual Stories That Move People",
-    "subheadline": "Video production & social media content for brands that refuse to blend in.",
-    "cta": "Start Your Project"
+    "overline": "Creative Studio",
+    "headline": "We craft visual stories that",
+    "accent": "resonate",
+    "subheadline": "A boutique video production and social media agency dedicated to elevating brands through meticulous craftsmanship and timeless aesthetics.",
+    "ctaPrimary": "View Our Work",
+    "ctaSecondary": "Our Process"
   },
   "manifesto": {
     "title": "Our Philosophy",

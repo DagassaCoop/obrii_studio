@@ -5,14 +5,23 @@
   },
   "nav": {
     "home": "Accueil",
+    "work": "Projets",
+    "services": "Services",
+    "process": "Processus",
+    "pricing": "Tarifs",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "cta": "Démarrer un Projet",
+    "tagline": "Du contenu au-delà du cadre."
   },
   "hero": {
-    "headline": "Nous Créons des Histoires Visuelles Qui Émeuvent",
-    "subheadline": "Production vidéo et contenu pour les réseaux sociaux pour les marques qui refusent de se fondre dans la masse.",
-    "cta": "Lancez Votre Projet"
+    "overline": "Studio Créatif",
+    "headline": "Nous créons des histoires visuelles qui",
+    "accent": "résonnent",
+    "subheadline": "Une agence boutique de production vidéo et de médias sociaux dédiée à l'élévation des marques par un artisanat méticuleux et une esthétique intemporelle.",
+    "ctaPrimary": "Voir Nos Projets",
+    "ctaSecondary": "Notre Processus"
   },
   "manifesto": {
     "title": "Notre Philosophie",

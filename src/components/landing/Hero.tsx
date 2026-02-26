@@ -9,20 +9,18 @@ export function Hero() {
 
         {/* Overline */}
         <p className="text-overline mb-8 tracking-[0.18em]">
-          Creative Studio
+          {t("overline")}
         </p>
 
         {/* Headline — large serif, left-aligned */}
-        <h1 className=" text-[clamp(3rem,8vw,4.5rem)] leading-[1.05] tracking-tight text-graphite">
-          We craft visual stories that{" "}
-          <em className="not-italic font-light italic">resonate</em>
+        <h1 className="text-[clamp(3rem,8vw,4.5rem)] leading-[1.05] tracking-tight text-graphite">
+          {t("headline")}{" "}
+          <em className="not-italic font-light italic">{t("accent")}</em>
         </h1>
 
         {/* Subheadline */}
         <p className="mt-8 max-w-lg text-[1.0625rem] leading-relaxed text-graphite/70">
-          A boutique video production and social media agency dedicated to
-          elevating brands through meticulous craftsmanship and timeless
-          aesthetics.
+          {t("subheadline")}
         </p>
 
         {/* CTAs */}
@@ -31,13 +29,13 @@ export function Hero() {
             href="/#work"
             className="rounded-full bg-terracotta px-8 py-3.5 text-[0.9375rem] font-medium text-white tracking-wide transition-all duration-200 ease-in-out hover:bg-burnt-earth active:scale-[0.97]"
           >
-            View Our Work
+            {t("ctaPrimary")}
           </a>
           <a
             href="/#process"
             className="rounded-full border border-graphite/25 px-8 py-3.5 text-[0.9375rem] font-medium text-graphite tracking-wide transition-all duration-200 ease-in-out hover:border-graphite/50 hover:bg-graphite/5 active:scale-[0.97]"
           >
-            Our Process
+            {t("ctaSecondary")}
           </a>
         </div>
 

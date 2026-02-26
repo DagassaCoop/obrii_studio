@@ -4,15 +4,8 @@ import { Link, useRouter, usePathname } from "@/i18n/navigation";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { Globe, Menu } from "lucide-react";
 import { useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { routing } from "@/i18n/routing";
-
-const navItems = [
-  { label: "Work", href: "/#work" },
-  { label: "Services", href: "/#services" },
-  { label: "Process", href: "/#process" },
-  { label: "Pricing", href: "/#pricing" },
-] as const;
 
 function LocaleSwitcher() {
   const locale = useLocale();
@@ -38,6 +31,14 @@ function LocaleSwitcher() {
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const t = useTranslations("nav");
+
+  const navItems = [
+    { label: t("work"), href: "/#work" },
+    { label: t("services"), href: "/#services" },
+    { label: t("process"), href: "/#process" },
+    { label: t("pricing"), href: "/#pricing" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-terracotta">
@@ -49,7 +50,7 @@ export function Header() {
             OBRII<span className="font-light">STUDIO</span>
           </span>
           <span className="text-[10px] tracking-wide text-white/60 mt-0.5">
-            Content beyond the frame.
+            {t("tagline")}
           </span>
         </Link>
 
@@ -57,7 +58,7 @@ export function Header() {
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
           {navItems.map((item) => (
             <a
-              key={item.label}
+              key={item.href}
               href={item.href}
               className="text-sm text-white/80 hover:text-white transition-colors tracking-wide"
             >
@@ -73,7 +74,7 @@ export function Header() {
             href="/contact"
             className="text-sm text-white border border-white/70 hover:border-white hover:bg-white/10 transition-all rounded-full px-5 py-1.5 tracking-wide"
           >
-            Start a Project
+            {t("cta")}
           </Link>
         </div>
 
@@ -95,7 +96,7 @@ export function Header() {
               <nav className="mt-8 flex flex-col gap-5">
                 {navItems.map((item) => (
                   <a
-                    key={item.label}
+                    key={item.href}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
                     className="text-lg text-white/80 hover:text-white transition-colors"
@@ -108,7 +109,7 @@ export function Header() {
                   onClick={() => setMobileOpen(false)}
                   className="mt-4 text-sm text-white border border-white/70 hover:border-white hover:bg-white/10 transition-all rounded-full px-5 py-2 text-center tracking-wide"
                 >
-                  Start a Project
+                  {t("cta")}
                 </Link>
               </nav>
             </SheetContent>
