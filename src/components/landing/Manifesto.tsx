@@ -1,15 +1,14 @@
 import { useTranslations } from "next-intl";
+import { SectionHeading } from "../ui/SectionHeading";
 
 export function Manifesto() {
   const t = useTranslations("manifesto");
 
   return (
-    <section className="relative py-32">
-      <div className="mx-auto max-w-4xl px-6 text-center">
-        <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-          {t("title")}
-        </h2>
-        <p className="mt-8 text-2xl font-light leading-relaxed text-foreground/90 sm:text-3xl md:text-4xl">
+    <section className="relative py-24 bg-section-secondary">
+      <div className="mx-auto max-w-3xl px-6 text-center">
+        <SectionHeading title="The art is in the restraint" overline={t("title")} className="mb-12" />
+        <p className="mt-4 text-lg font-light leading-relaxed text-foreground/80 sm:text-xl">
           {t("text")}
         </p>
       </div>
