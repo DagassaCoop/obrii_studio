@@ -29,23 +29,32 @@ export function Services() {
             const features: string[] = t.raw(`${key}.features`);
 
             return (
-              <Card key={key} className="hover:shadow-sm transition-shadow">
+              <Card
+                key={key}
+                className="border-terracotta transition-shadow duration-500 hover:shadow-[0_2px_0_0_rgba(176,79,70)]"
+              >
                 <CardHeader>
-                  {/* Icon — circle border, no fill */}
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-graphite/20">
-                    <Icon className="h-5 w-5 text-graphite/60" strokeWidth={1.5} />
+                  {/* Icon — warm mist fill, no border */}
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-warm-mist">
+                    <Icon className="h-5 w-5 text-graphite/70" strokeWidth={1.5} />
                   </div>
                   <CardTitle>{t(`${key}.title`)}</CardTitle>
                 </CardHeader>
 
                 <CardContent>
-                  <p className="mb-6 text-[0.9375rem] leading-relaxed text-graphite/50">
+                  {/* Description — visually secondary */}
+                  <p className="mb-4 text-sm leading-relaxed text-graphite/50">
                     {t(`${key}.description`)}
                   </p>
-                  <ul className="space-y-1.5">
+
+                  {/* Divider — separates description from features */}
+                  <div className="border-t border-graphite/10 my-4" />
+
+                  {/* Feature list — terracotta square bullets */}
+                  <ul className="space-y-2">
                     {features.map((feature: string, i: number) => (
-                      <li key={i} className="flex items-center gap-4 text-[0.9375rem] text-graphite/50">
-                        <span className="text-graphite/30 select-none">—</span>
+                      <li key={i} className="flex items-center gap-3 text-sm text-graphite/60">
+                        <span className="h-1.5 w-1.5 rounded-sm bg-terracotta/60 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
