@@ -8,6 +8,7 @@ import { serverClient } from "@/lib/sanity/client";
 import { featuredProjectsQuery } from "@/lib/sanity/queries";
 import { SanityProject } from "@/lib/sanity/types";
 import { urlFor } from "@/lib/sanity/image";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const categoryColors: Record<string, string> = {
   video: "bg-blue-500/10 text-blue-400 border-blue-500/20",
@@ -23,14 +24,13 @@ export async function FeaturedWork() {
     <section className="relative py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 flex items-end justify-between">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              {t("title")}
-            </h2>
-            <p className="mt-4 text-muted-foreground">{t("subtitle")}</p>
-          </div>
-          <Link href="/portfolio" className="hidden sm:block">
-            <Button variant="outline" className="group rounded-full border-white/10">
+          <SectionHeading
+            overline="Work"
+            title={t("title")}
+            align="left"
+          />
+          <Link href="/portfolio" className="hidden sm:block flex-shrink-0 ml-8">
+            <Button variant="outline" className="group rounded-full">
               {t("viewAll")}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>

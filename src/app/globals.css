@@ -207,6 +207,24 @@
 
 @layer utilities {
 
+  /* — Font Family Switchers ────────────────────────────────────────────── */
+  /*    Use these to override the default sans when you need a specific font. */
+
+  /* Plus Jakarta Sans — default body/UI font (already applied via font-sans) */
+  .font-jakarta {
+    font-family: var(--font-jakarta-sans), system-ui, sans-serif;
+  }
+
+  /* Josefin Slab — editorial/display font (headings, hero, overlines) */
+  .font-slab {
+    font-family: var(--font-josefin-slab), Georgia, serif;
+  }
+
+  /* Geist Mono — code, timestamps, technical values */
+  .font-mono {
+    font-family: var(--font-geist-mono), "Courier New", monospace;
+  }
+
   /* — Section Backgrounds (alternating rhythm) — */
   .bg-section-primary {
     background-color: #F5F0EC;

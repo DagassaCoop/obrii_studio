@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function ProcessTimeline() {
   const t = useTranslations("process");
@@ -16,14 +17,11 @@ export function ProcessTimeline() {
       <div className="absolute left-1/2 top-0 h-px w-32 -translate-x-1/2 bg-gradient-to-r from-transparent via-foreground/20 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            {t("title")}
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            {t("subtitle")}
-          </p>
-        </div>
+        <SectionHeading
+          overline="Process"
+          title={t("title")}
+          className="mb-16"
+        />
 
         <div className="relative">
           {/* Connection line (desktop) */}

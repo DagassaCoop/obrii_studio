@@ -5,7 +5,7 @@ export function Hero() {
 
   return (
     <section className="bg-section-primary min-h-[100vh] flex items-center">
-      <div className="mx-auto w-full max-w-7xl px-6 md:px-12 lg:px-20 pt-32 pb-24">
+      <div className="mx-auto w-full max-w-5xl px-8 md:px-16 lg:px-28 pt-24 pb-16">
 
         {/* Overline */}
         <p className="text-overline mb-8 tracking-[0.18em]">
@@ -13,7 +13,7 @@ export function Hero() {
         </p>
 
         {/* Headline — large serif, left-aligned */}
-        <h1 className="max-w-4xl text-[clamp(3rem,8vw,6.5rem)] leading-[1.05] tracking-tight text-graphite">
+        <h1 className=" text-[clamp(3rem,8vw,4.5rem)] leading-[1.05] tracking-tight text-graphite">
           We craft visual stories that{" "}
           <em className="not-italic font-light italic">resonate</em>
         </h1>
