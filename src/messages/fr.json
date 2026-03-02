@@ -28,7 +28,7 @@
     "text": "Chaque marque a une histoire qui mérite d'être racontée. Nous ne produisons pas simplement du contenu — nous sculptons des expériences visuelles qui résonnent, inspirent et convertissent. Dans un monde noyé dans le bruit, nous créons le signal."
   },
   "services": {
-    "title": "Nos Services",
+    "title": "Ce que nous faisons",
     "subtitle": "Des services conçus avec précision pour les marques qui exigent l'excellence.",
     "video": {
       "title": "Production Vidéo",
@@ -62,32 +62,32 @@
     }
   },
   "featuredWork": {
-    "title": "Projets en Vedette",
+    "title": "Travaux en vedette",
     "subtitle": "Une sélection de projets qui illustrent notre savoir-faire.",
     "viewAll": "Voir Tous les Projets",
     "viewProject": "Voir le Projet"
   },
   "process": {
-    "title": "Notre Processus",
+    "title": "La couche de transparence",
     "subtitle": "Un workflow transparent et collaboratif conçu pour livrer des résultats.",
     "steps": [
       {
-        "number": "01",
+        "number": "1",
         "title": "Briefing",
         "description": "Nous écoutons. Comprendre vos objectifs, votre audience et votre vision est la base de tout grand projet."
       },
       {
-        "number": "02",
+        "number": "2",
         "title": "Production",
         "description": "Les caméras tournent. Notre équipe donne vie à la vision créative avec un équipement professionnel et une direction expérimentée."
       },
       {
-        "number": "03",
+        "number": "3",
         "title": "Post-Production",
         "description": "La magie opère. Montage, étalonnage, design sonore et motion graphics transforment les rushes en œuvre d'art."
       },
       {
-        "number": "04",
+        "number": "4",
         "title": "Livraison",
         "description": "Prêt au lancement. Fichiers finaux optimisés pour chaque plateforme, avec des révisions jusqu'à votre entière satisfaction."
       }

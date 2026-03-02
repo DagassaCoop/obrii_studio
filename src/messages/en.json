@@ -68,26 +68,26 @@
     "viewProject": "View Project"
   },
   "process": {
-    "title": "Our Process",
+    "title": "The transparency layer",
     "subtitle": "A transparent, collaborative workflow designed to deliver results.",
     "steps": [
       {
-        "number": "01",
+        "number": "1",
         "title": "Briefing",
         "description": "We listen. Understanding your goals, audience, and vision is the foundation of every great project."
       },
       {
-        "number": "02",
+        "number": "2",
         "title": "Production",
         "description": "Cameras roll. Our team brings the creative vision to life with professional equipment and experienced direction."
       },
       {
-        "number": "03",
+        "number": "3",
         "title": "Post-Production",
         "description": "The magic happens. Editing, color grading, sound design, and motion graphics transform raw footage into art."
       },
       {
-        "number": "04",
+        "number": "4",
         "title": "Delivery",
         "description": "Launch ready. Final files optimized for every platform, with revisions until you're completely satisfied."
       }

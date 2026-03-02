@@ -13,9 +13,6 @@ export function ProcessTimeline() {
 
   return (
     <section className="relative py-32">
-      {/* Subtle divider */}
-      <div className="absolute left-1/2 top-0 h-px w-32 -translate-x-1/2 bg-gradient-to-r from-transparent via-foreground/20 to-transparent" />
-
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           overline="Process"
@@ -31,11 +28,11 @@ export function ProcessTimeline() {
             {steps.map((step, index) => (
               <div key={index} className="relative text-center">
                 {/* Step number */}
-                <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-background text-lg font-bold text-foreground/60">
-                  {step.number}
+                <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 flex items-center justify-center rounded-full border bg-background">
+                  <span className="text-2xl text-primary font-light">{step.number}</span>
                 </div>
 
-                <h3 className="mb-3 text-lg font-semibold">{step.title}</h3>
+                <h3 className="mb-3 text-2xl">{step.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   {step.description}
                 </p>
