@@ -18,7 +18,7 @@ export async function FeaturedWork() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 flex items-end justify-between">
           <SectionHeading
-            overline="Work"
+            overline={t("overline")}
             title={t("title")}
             align="left"
           />

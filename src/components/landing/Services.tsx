@@ -18,7 +18,7 @@ export function Services() {
     <section className="relative py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          overline="Services"
+          overline={t("overline")}
           title={t("title")}
           className="mb-16"
         />

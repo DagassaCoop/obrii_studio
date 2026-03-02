@@ -25,9 +25,11 @@
   },
   "manifesto": {
     "title": "Notre Philosophie",
+    "heading": "L'art est dans la contrainte",
     "text": "Chaque marque a une histoire qui mérite d'être racontée. Nous ne produisons pas simplement du contenu — nous sculptons des expériences visuelles qui résonnent, inspirent et convertissent. Dans un monde noyé dans le bruit, nous créons le signal."
   },
   "services": {
+    "overline": "Services",
     "title": "Ce que nous faisons",
     "subtitle": "Des services conçus avec précision pour les marques qui exigent l'excellence.",
     "video": {
@@ -62,12 +64,14 @@
     }
   },
   "featuredWork": {
+    "overline": "Projets",
     "title": "Travaux en vedette",
     "subtitle": "Une sélection de projets qui illustrent notre savoir-faire.",
     "viewAll": "Voir Tous les Projets",
     "viewProject": "Voir le Projet"
   },
   "process": {
+    "overline": "Processus",
     "title": "La couche de transparence",
     "subtitle": "Un workflow transparent et collaboratif conçu pour livrer des résultats.",
     "steps": [
@@ -94,6 +98,7 @@
     ]
   },
   "pricing": {
+    "overline": "Tarifs",
     "title": "Forfaits",
     "subtitle": "Tarification transparente. Pas de frais cachés.",
     "currency": "$",

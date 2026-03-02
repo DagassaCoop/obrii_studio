@@ -23,7 +23,7 @@ export function Pricing() {
     <section className="relative py-32 bg-section-secondary">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          overline="Pricing"
+          overline={t("overline")}
           title={t("title")}
           className="mb-21"
         />

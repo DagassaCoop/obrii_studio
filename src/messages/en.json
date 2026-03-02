@@ -25,9 +25,11 @@
   },
   "manifesto": {
     "title": "Our Philosophy",
+    "heading": "The art is in the restraint",
     "text": "Every brand has a story worth telling. We don't just produce content — we sculpt visual experiences that resonate, inspire, and convert. In a world drowning in noise, we create signal."
   },
   "services": {
+    "overline": "Services",
     "title": "What We Do",
     "subtitle": "Precision-crafted services for brands that demand excellence.",
     "video": {
@@ -62,12 +64,14 @@
     }
   },
   "featuredWork": {
+    "overline": "Work",
     "title": "Featured Work",
     "subtitle": "Selected projects that showcase our craft.",
     "viewAll": "View All Projects",
     "viewProject": "View Project"
   },
   "process": {
+    "overline": "Process",
     "title": "The transparency layer",
     "subtitle": "A transparent, collaborative workflow designed to deliver results.",
     "steps": [
@@ -94,6 +98,7 @@
     ]
   },
   "pricing": {
+    "overline": "Pricing",
     "title": "Packages",
     "subtitle": "Transparent pricing. No hidden fees.",
     "currency": "$",
