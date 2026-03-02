@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Check } from "lucide-react";
 
 export function Pricing() {
   const t = useTranslations("pricing");
@@ -67,11 +68,11 @@ export function Pricing() {
                 {/* Divider */}
                 <div className="border-t border-graphite/10 mb-4" />
 
-                {/* Feature list — terracotta square bullets */}
-                <ul className="flex-1 space-y-2">
+                {/* Feature list — terracotta checkmarks */}
+                <ul className="flex-1 space-y-3">
                   {pkg.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm text-graphite/60">
-                      <span className="h-1.5 w-1.5 rounded-sm bg-terracotta/60 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-3 text-sm text-graphite/65">
+                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-terracotta/70" strokeWidth={2} />
                       {feature}
                     </li>
                   ))}
