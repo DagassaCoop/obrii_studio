@@ -144,9 +144,10 @@
     ]
   },
   "personalCta": {
-    "title": "Let's Create Something Great Together",
-    "text": "Have a project in mind? We'd love to hear about it over a cup of coffee — virtual or in person.",
-    "cta": "Let's Talk Over Coffee ☕"
+    "title": "Let's discuss your next project",
+    "text": "Every great collaboration starts with a conversation. Tell us about your vision, and let's explore how we can bring it to life together.",
+    "cta": "Schedule a Call",
+    "email": "hello@obrii.studio"
   },
   "contact": {
     "title": "Get In Touch",
