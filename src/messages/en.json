@@ -68,7 +68,12 @@
     "title": "Featured Work",
     "subtitle": "Selected projects that showcase our craft.",
     "viewAll": "View All Projects",
-    "viewProject": "View Project"
+    "viewProject": "View Project",
+    "categories": {
+      "video": "Video",
+      "social": "Social",
+      "smm": "SMM"
+    }
   },
   "process": {
     "overline": "Process",
@@ -101,6 +106,7 @@
     "overline": "Pricing",
     "title": "Packages",
     "subtitle": "Transparent pricing. No hidden fees.",
+    "popular": "Most Popular",
     "currency": "$",
     "cta": "Get Started",
     "custom": "Need something custom?",

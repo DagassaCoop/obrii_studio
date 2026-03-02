@@ -59,7 +59,7 @@ export async function FeaturedWork() {
                 {/* Category badge — top right, high-contrast frosted pill */}
                 <div className="absolute top-4 right-4">
                   <span className="inline-block rounded-full border border-white/25 bg-terracotta/35 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-white backdrop-blur-sm">
-                    {project.category}
+                    {t(`categories.${project.category}`, { default: project.category })}
                   </span>
                 </div>
 

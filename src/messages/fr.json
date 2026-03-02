@@ -68,7 +68,12 @@
     "title": "Travaux en vedette",
     "subtitle": "Une sélection de projets qui illustrent notre savoir-faire.",
     "viewAll": "Voir Tous les Projets",
-    "viewProject": "Voir le Projet"
+    "viewProject": "Voir le Projet",
+    "categories": {
+      "video": "Vidéo",
+      "social": "Social",
+      "smm": "SMM"
+    }
   },
   "process": {
     "overline": "Processus",
@@ -101,6 +106,7 @@
     "overline": "Tarifs",
     "title": "Forfaits",
     "subtitle": "Tarification transparente. Pas de frais cachés.",
+    "popular": "Le plus populaire",
     "currency": "$",
     "cta": "Commencer",
     "custom": "Besoin de quelque chose sur mesure ?",

@@ -41,7 +41,7 @@ export function Pricing() {
                 {pkg.popular && (
                   <div className="mb-3 h-5">
                     <span className="inline-flex items-center rounded-sm bg-terracotta/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-terracotta">
-                      Most Popular
+                      {t("popular")}
                     </span>
                   </div>
                 )}
