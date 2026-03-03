@@ -1,7 +1,7 @@
 "use client";
 
 import { Link, useRouter, usePathname } from "@/i18n/navigation";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/foundation/sheet";
 import { Globe, Menu } from "lucide-react";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";

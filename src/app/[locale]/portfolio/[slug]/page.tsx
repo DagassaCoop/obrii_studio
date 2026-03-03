@@ -1,8 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/foundation/badge";
+import { Button } from "@/components/ui/foundation/button";
+import { Separator } from "@/components/ui/foundation/separator";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import Image from "next/image";

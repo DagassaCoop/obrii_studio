@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/foundation/card";
 import { Video, Share2, BarChart3 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 

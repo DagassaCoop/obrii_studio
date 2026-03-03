@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/foundation/separator";
 import { Instagram, Linkedin, Youtube, Mail } from "lucide-react";
 
 export function Footer() {

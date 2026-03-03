@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/foundation/badge";
+import { Button } from "@/components/ui/foundation/button";
 import { SanityProject } from "@/lib/sanity/types";
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity/image";

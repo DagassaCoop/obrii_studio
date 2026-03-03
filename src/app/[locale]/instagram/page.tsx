@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/foundation/button";
 import { Instagram } from "lucide-react";
 
 export default function InstagramPage() {

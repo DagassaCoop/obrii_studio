@@ -1,17 +1,17 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/foundation/button";
+import { Input } from "@/components/ui/foundation/input";
+import { Label } from "@/components/ui/foundation/label";
+import { Textarea } from "@/components/ui/foundation/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components/ui/foundation/select";
 import { useState } from "react";
 import { Mail, Send } from "lucide-react";
 
