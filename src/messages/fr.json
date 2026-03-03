@@ -197,6 +197,29 @@
     }
   },
   "portfolio": {
+    "heroOverline": "Notre Portfolio",
+    "heroTitle": "Des histoires que nous avons fait vivre",
+    "heroSubtitle": "Une collection curatée de récits visuels créés avec intention, précision et âme.",
+    "clientsOverline": "Ils nous font confiance",
+    "clientsTitle": "Marques avec lesquelles nous avons travaillé",
+    "stats": {
+      "projects": {
+        "value": "50+",
+        "label": "Projets Livrés"
+      },
+      "industries": {
+        "value": "12",
+        "label": "Industries Servies"
+      },
+      "retention": {
+        "value": "98%",
+        "label": "Fidélisation Clients"
+      },
+      "views": {
+        "value": "4M+",
+        "label": "Vues Générées"
+      }
+    },
     "title": "Nos Réalisations",
     "subtitle": "Chaque projet raconte une histoire. Voici les nôtres.",
     "filterAll": "Tous",

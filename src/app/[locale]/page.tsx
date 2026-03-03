@@ -4,7 +4,7 @@ import { Services } from "@/components/landing/Services";
 import { FeaturedWork } from "@/components/landing/FeaturedWork";
 import { ProcessTimeline } from "@/components/landing/ProcessTimeline";
 import { Pricing } from "@/components/landing/Pricing";
-import { PersonalCTA } from "@/components/landing/PersonalCTA";
+import { ContactCTA } from "@/components/ui/ContactCTA";
 
 export default function HomePage() {
   return (
@@ -15,7 +15,7 @@ export default function HomePage() {
       <FeaturedWork />
       <ProcessTimeline />
       <Pricing />
-      <PersonalCTA />
+      <ContactCTA />
     </>
   );
 }

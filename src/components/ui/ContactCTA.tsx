@@ -2,19 +2,19 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Coffee } from "lucide-react";
 
-export function PersonalCTA() {
+export function ContactCTA() {
   const t = useTranslations("personalCta");
 
   return (
     <section className="relative py-32">
       <div className="mx-auto max-w-2xl px-6 text-center">
 
-        {/* Icon — warm mist circle */}
+        {/* Icon */}
         <div className="mx-auto mb-10 flex h-20 w-20 items-center justify-center rounded-full border border-graphite/25">
           <Coffee className="h-6 w-6 text-terracotta/70" strokeWidth={1.5} />
         </div>
 
-        {/* Title — large serif, light weight */}
+        {/* Title */}
         <h2 className="font-slab text-[clamp(2rem,4vw,2.75rem)] font-light leading-snug tracking-tight text-graphite">
           {t("title")}
         </h2>
