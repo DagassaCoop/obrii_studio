@@ -8,6 +8,13 @@ export function Footer() {
   const nav = useTranslations("nav");
   const year = new Date().getFullYear();
 
+  const navItems = [
+    { label: nav("home"), href: "/" },
+    { label: nav("portfolio"), href: "/portfolio" },
+    { label: nav("contact"), href: "/contact" },
+    { label: nav("blog"), href: "/blog" },
+  ];
+
   const socials = [
     { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
     { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
@@ -37,18 +44,12 @@ export function Footer() {
               {t("navigation")}
             </h4>
             <nav className="flex flex-col gap-3">
-              <Link href="/" className="text-sm text-white/55 transition-colors hover:text-white">
-                {nav("home")}
-              </Link>
-              <Link href="/portfolio" className="text-sm text-white/55 transition-colors hover:text-white">
-                {nav("portfolio")}
-              </Link>
-              <Link href="/contact" className="text-sm text-white/55 transition-colors hover:text-white">
-                {nav("contact")}
-              </Link>
-              <Link href="/instagram" className="text-sm text-white/55 transition-colors hover:text-white">
-                {nav("instagram")}
-              </Link>
+              {navItems.map((item) => (
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                <Link key={item.href} href={item.href as any} className="text-sm text-white/55 transition-colors hover:text-white">
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </div>
 

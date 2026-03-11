@@ -34,10 +34,10 @@ export function Header() {
   const t = useTranslations("nav");
 
   const navItems = [
-    { label: t("work"), href: "/#work" },
-    { label: t("services"), href: "/#services" },
-    { label: t("process"), href: "/#process" },
-    { label: t("pricing"), href: "/#pricing" },
+    { label: t("home"), href: "/" },
+    { label: t("portfolio"), href: "/portfolio" },
+    { label: t("contact"), href: "/contact" },
+    { label: t("blog"), href: "/blog" },
   ];
 
   return (
@@ -55,15 +55,16 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation — centered absolutely */}
-        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-10">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              href={item.href as any}
               className="text-sm text-white/80 hover:text-white transition-colors tracking-wide"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -93,16 +94,17 @@ export function Header() {
                   OBRII<span className="font-light">STUDIO</span>
                 </span>
               </SheetTitle>
-              <nav className="mt-8 flex flex-col gap-5">
+              <nav className="mt-8 flex flex-col gap-6">
                 {navItems.map((item) => (
-                  <a
+                  <Link
                     key={item.href}
-                    href={item.href}
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    href={item.href as any}
                     onClick={() => setMobileOpen(false)}
                     className="text-lg text-white/80 hover:text-white transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
                 <Link
                   href="/contact"
