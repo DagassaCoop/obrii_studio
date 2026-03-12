@@ -13,8 +13,9 @@ export interface SanityProject {
       _ref: string;
     };
   };
-  vimeoUrl?: string;
+  videoUrl?: string;
   shortDescription?: string;
+  year?: number;
   fullDescription?: string;
   problem?: string;
   solution?: string;

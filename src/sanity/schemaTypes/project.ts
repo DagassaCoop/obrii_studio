@@ -57,9 +57,10 @@ export const projectType = defineType({
       options: { hotspot: true },
     }),
     defineField({
-      name: "vimeoUrl",
-      title: "Vimeo URL",
+      name: "videoUrl",
+      title: "Video URL",
       type: "url",
+      description: "YouTube or Vimeo URL",
     }),
     defineField({
       name: "shortDescription",
