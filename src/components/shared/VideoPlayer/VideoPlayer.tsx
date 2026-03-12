@@ -1,5 +1,6 @@
 /**
- * VideoPlayer — Embeds YouTube or Vimeo videos from any common URL format.
+ * VideoPlayer — Router component that detects the video provider
+ * from any YouTube or Vimeo URL and renders the appropriate player.
  *
  * Supported URL patterns:
  *   YouTube:  youtube.com/watch?v=ID, youtu.be/ID, youtube.com/embed/ID,
@@ -7,6 +8,9 @@
  *   Vimeo:    vimeo.com/ID, vimeo.com/channels/X/ID,
  *             player.vimeo.com/video/ID
  */
+
+import { YouTubePlayer } from "./YouTubePlayer";
+import { VimeoPlayer } from "./VimeoPlayer";
 
 type VideoProvider = "youtube" | "vimeo";
 
@@ -24,7 +28,6 @@ function parseVideoUrl(raw: string): ParsedVideo | null {
 
   let url: URL;
   try {
-    // Handle protocol-relative URLs
     url = new URL(raw.startsWith("//") ? `https:${raw}` : raw);
   } catch {
     return null;
@@ -34,11 +37,9 @@ function parseVideoUrl(raw: string): ParsedVideo | null {
 
   // ── YouTube ──────────────────────────────────────────────────────────
   if (hostname === "youtube.com" || hostname === "m.youtube.com") {
-    // /watch?v=ID
     const v = url.searchParams.get("v");
     if (v) return { provider: "youtube", id: v };
 
-    // /embed/ID, /shorts/ID, /live/ID
     const segments = url.pathname.split("/").filter(Boolean);
     if (
       segments.length >= 2 &&
@@ -56,7 +57,6 @@ function parseVideoUrl(raw: string): ParsedVideo | null {
   // ── Vimeo ────────────────────────────────────────────────────────────
   if (hostname === "vimeo.com") {
     const segments = url.pathname.split("/").filter(Boolean);
-    // /channels/X/ID or /groups/X/videos/ID
     const last = segments[segments.length - 1];
     if (last && /^\d+$/.test(last)) {
       return { provider: "vimeo", id: last };
@@ -64,7 +64,6 @@ function parseVideoUrl(raw: string): ParsedVideo | null {
   }
 
   if (hostname === "player.vimeo.com") {
-    // /video/ID
     const segments = url.pathname.split("/").filter(Boolean);
     if (segments[0] === "video" && segments[1]) {
       return { provider: "vimeo", id: segments[1] };
@@ -74,27 +73,13 @@ function parseVideoUrl(raw: string): ParsedVideo | null {
   return null;
 }
 
-/** Builds the embed src URL with provider-specific params. */
-function buildEmbedUrl(video: ParsedVideo, autoplay: boolean): string {
-  const ap = autoplay ? 1 : 0;
-
-  switch (video.provider) {
-    case "youtube":
-      return `https://www.youtube-nocookie.com/embed/${video.id}?rel=0&autoplay=${ap}&playsinline=1`;
-    case "vimeo":
-      return `https://player.vimeo.com/video/${video.id}?dnt=1&autoplay=${ap}&playsinline=1`;
-  }
-}
-
 // ── Component ────────────────────────────────────────────────────────────
 
 interface VideoPlayerProps {
   /** Any YouTube or Vimeo URL */
   url: string;
-  /** Accessible iframe title (defaults to "Video") */
+  /** Accessible title for the embed (defaults to "Video") */
   title?: string;
-  /** Start playback immediately */
-  autoplay?: boolean;
   /** Override wrapper className */
   className?: string;
 }
@@ -102,7 +87,6 @@ interface VideoPlayerProps {
 export function VideoPlayer({
   url,
   title = "Video",
-  autoplay = false,
   className,
 }: VideoPlayerProps) {
   const parsed = parseVideoUrl(url);
@@ -117,20 +101,16 @@ export function VideoPlayer({
     );
   }
 
-  const embedSrc = buildEmbedUrl(parsed, autoplay);
-
-  return (
-    <div className={`aspect-video w-full ${className ?? ""}`}>
-      <iframe
-        src={embedSrc}
-        title={title}
-        className="h-full w-full rounded-xl"
-        allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
-        allowFullScreen
-        referrerPolicy="no-referrer-when-downgrade"
-      />
-    </div>
-  );
+  switch (parsed.provider) {
+    case "youtube":
+      return (
+        <YouTubePlayer id={parsed.id} title={title} className={className} />
+      );
+    case "vimeo":
+      return (
+        <VimeoPlayer id={parsed.id} title={title} className={className} />
+      );
+  }
 }
 
 /** Re-export the parser for use in validation or other components */

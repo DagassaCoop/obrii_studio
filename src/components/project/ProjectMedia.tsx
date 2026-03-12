@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SanityProject } from "@/lib/sanity/types";
 import { urlFor } from "@/lib/sanity/image";
-import { VideoPlayer } from "@/components/shared/VideoPlayer";
+import { VideoPlayer } from "@/components/shared/VideoPlayer/VideoPlayer";
 
 interface ProjectMediaProps {
   project: Pick<SanityProject, "title" | "videoUrl" | "heroMedia">;
