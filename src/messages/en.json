@@ -68,13 +68,8 @@
     "overline": "Work",
     "title": "Featured Work",
     "subtitle": "Selected projects that showcase our craft.",
-    "viewAll": "View All Projects",
-    "viewProject": "View Project",
-    "categories": {
-      "video": "Video",
-      "social": "Social",
-      "smm": "SMM"
-    }
+    "viewAll": "Explore All Projects",
+    "viewProject": "Explore Project"
   },
   "process": {
     "overline": "Process",

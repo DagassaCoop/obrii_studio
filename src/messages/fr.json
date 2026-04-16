@@ -69,12 +69,7 @@
     "title": "Travaux en vedette",
     "subtitle": "Une sélection de projets qui illustrent notre savoir-faire.",
     "viewAll": "Voir Tous les Projets",
-    "viewProject": "Voir le Projet",
-    "categories": {
-      "video": "Vidéo",
-      "social": "Social",
-      "smm": "SMM"
-    }
+    "viewProject": "Voir le Projet"
   },
   "process": {
     "overline": "Processus",

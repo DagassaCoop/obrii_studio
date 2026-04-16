@@ -1,11 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight } from "lucide-react";
 import { serverClient } from "@/lib/sanity/client";
 import { featuredProjectsQuery } from "@/lib/sanity/queries";
 import { SanityProject } from "@/lib/sanity/types";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ProjectGrid } from "@/components/ui/ProjectGrid";
+import { FeaturedWorkRow } from "@/components/landing/FeaturedWorkRow";
 
 export async function FeaturedWork() {
   const t = await getTranslations("featuredWork");
@@ -13,41 +11,45 @@ export async function FeaturedWork() {
 
   return (
     <section className="relative py-32 bg-section-secondary">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-screen-2xl px-6 md:px-8">
 
-        {/* Header row */}
-        <div className="mb-16 flex items-end justify-between">
-          <SectionHeading
-            overline={t("overline")}
-            title={t("title")}
-            align="left"
-          />
-          <Link
-            href="/portfolio"
-            className="flex flex-shrink-0 ml-8 group items-center rounded-full border border-graphite/25 px-6 py-2.5 text-[0.9375rem] font-medium text-graphite tracking-wide transition-all duration-200 ease-in-out hover:border-graphite/50 hover:bg-graphite/5 active:scale-[0.97]"
-          >
-            <span className="mr-2 max-sm:hidden">{t("viewAll")}</span>
-            <ArrowRight className="h-4 w-4 transition-transform text-terracotta group-hover:translate-x-1" />
-          </Link>
+        {/* ── Header ──────────────────────────────────────── */}
+        <div className="mb-16 flex flex-col justify-between gap-6 pb-8 md:flex-row md:items-end">
+          <div className="max-w-3xl">
+            <p className="text-overline mb-6 tracking-[0.18em]">{t("overline")}</p>
+            <h2 className="font-slab text-[clamp(1.5rem,3.5vw,2.75rem)] leading-[1.15] tracking-tight text-graphite">
+              {t("title")}
+            </h2>
+          </div>
+          <div className="flex flex-col items-start gap-2 md:items-end">
+            <p className="font-light leading-relaxed text-graphite/60 md:text-right">
+              {t("subtitle")}
+            </p>
+            <Link
+              href="/portfolio"
+              className="group mt-4 flex items-center gap-2 text-[0.75rem] font-bold uppercase tracking-widest text-terracotta"
+            >
+              {t("viewAll")}
+              <span className="h-px w-8 bg-terracotta transition-all duration-500 group-hover:w-12" />
+            </Link>
+          </div>
         </div>
 
-        {/* Grid */}
-        <ProjectGrid
-          projects={projects}
-          columns={3}
-          emptyMessage="No featured projects yet."
-        />
-
-        {/* Mobile "View All" */}
-        <div className="mt-8 text-center sm:hidden">
-          <Link
-            href="/portfolio"
-            className="group inline-flex items-center rounded-full border border-graphite/25 px-6 py-2.5 text-[0.9375rem] font-medium text-graphite tracking-wide transition-all duration-200 ease-in-out hover:border-graphite/50 hover:bg-graphite/5 active:scale-[0.97]"
-          >
-            {t("viewAll")}
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
+        {/* ── Zigzag project rows ─────────────────────────── */}
+        {projects.length > 0 ? (
+          <div className="space-y-16 md:space-y-24">
+            {projects.map((project, index) => (
+              <FeaturedWorkRow
+                key={project._id}
+                project={project}
+                reverse={index % 2 === 1}
+                exploreLabel={t("viewProject")}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="py-16 text-center text-graphite/40">No featured projects yet.</p>
+        )}
 
       </div>
     </section>
