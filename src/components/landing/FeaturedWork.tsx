@@ -1,13 +1,13 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { serverClient } from "@/lib/sanity/client";
+import { client } from "@/lib/sanity/client";
 import { featuredProjectsQuery } from "@/lib/sanity/queries";
 import { SanityProject } from "@/lib/sanity/types";
 import { FeaturedWorkRow } from "@/components/landing/FeaturedWorkRow";
 
 export async function FeaturedWork() {
   const t = await getTranslations("featuredWork");
-  const projects: SanityProject[] = await serverClient.fetch(featuredProjectsQuery);
+  const projects: SanityProject[] = await client.fetch(featuredProjectsQuery);
 
   return (
     <section className="relative py-32 bg-section-secondary">

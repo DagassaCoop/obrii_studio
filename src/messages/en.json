@@ -17,52 +17,13 @@
     "tagline": "Content beyond the frame."
   },
   "hero": {
-    "overline": "Creative Studio",
-    "headline": "We craft visual stories that",
-    "accent": "resonate",
-    "subheadline": "A boutique video production and social media agency dedicated to elevating brands through meticulous craftsmanship and timeless aesthetics.",
     "ctaPrimary": "View Our Work",
     "ctaSecondary": "Our Process"
-  },
-  "manifesto": {
-    "title": "Our Philosophy",
-    "heading": "The art is in the restraint",
-    "text": "Every brand has a story worth telling. We don't just produce content — we sculpt visual experiences that resonate, inspire, and convert. In a world drowning in noise, we create signal."
   },
   "services": {
     "overline": "Services",
     "title": "What We Do",
-    "subtitle": "Precision-crafted services for brands that demand excellence.",
-    "video": {
-      "title": "Video Production",
-      "description": "From concept to final cut. Commercial videos, brand films, product showcases, and event coverage that captivate your audience.",
-      "features": [
-        "Brand & Commercial Films",
-        "Product Showcases",
-        "Event Coverage",
-        "Motion Graphics"
-      ]
-    },
-    "social": {
-      "title": "Social Media Content",
-      "description": "Scroll-stopping content engineered for engagement. Reels, stories, and posts designed to grow your digital presence.",
-      "features": [
-        "Instagram Reels & Stories",
-        "TikTok Content",
-        "YouTube Shorts",
-        "Content Calendars"
-      ]
-    },
-    "smm": {
-      "title": "Social Media Management",
-      "description": "Full-cycle social media strategy. We plan, create, publish, and analyze — so you can focus on your business.",
-      "features": [
-        "Strategy & Planning",
-        "Community Management",
-        "Analytics & Reporting",
-        "Ad Campaign Support"
-      ]
-    }
+    "subtitle": "Precision-crafted services for brands that demand excellence."
   },
   "featuredWork": {
     "overline": "Work",
@@ -74,29 +35,7 @@
   "process": {
     "overline": "Process",
     "title": "The transparency layer",
-    "subtitle": "A transparent, collaborative workflow designed to deliver results.",
-    "steps": [
-      {
-        "number": "1",
-        "title": "Briefing",
-        "description": "We listen. Understanding your goals, audience, and vision is the foundation of every great project."
-      },
-      {
-        "number": "2",
-        "title": "Production",
-        "description": "Cameras roll. Our team brings the creative vision to life with professional equipment and experienced direction."
-      },
-      {
-        "number": "3",
-        "title": "Post-Production",
-        "description": "The magic happens. Editing, color grading, sound design, and motion graphics transform raw footage into art."
-      },
-      {
-        "number": "4",
-        "title": "Delivery",
-        "description": "Launch ready. Final files optimized for every platform, with revisions until you're completely satisfied."
-      }
-    ]
+    "subtitle": "A transparent, collaborative workflow designed to deliver results."
   },
   "pricing": {
     "overline": "Pricing",
@@ -106,49 +45,7 @@
     "currency": "$",
     "cta": "Get Started",
     "custom": "Need something custom?",
-    "customCta": "Let's Talk",
-    "packages": [
-      {
-        "name": "Starter",
-        "price": "1,500",
-        "description": "Perfect for small businesses starting with video.",
-        "features": [
-          "1 Video (up to 60 seconds)",
-          "Basic color grading",
-          "2 revision rounds",
-          "Delivery in 7 days",
-          "1 platform format"
-        ]
-      },
-      {
-        "name": "Professional",
-        "price": "3,500",
-        "popular": true,
-        "description": "For brands ready to make an impact.",
-        "features": [
-          "3 Videos (up to 90 seconds each)",
-          "Professional color grading",
-          "Sound design & music",
-          "3 revision rounds",
-          "Delivery in 14 days",
-          "Multi-platform formats"
-        ]
-      },
-      {
-        "name": "Enterprise",
-        "price": "7,000",
-        "description": "Full-scale production for serious brands.",
-        "features": [
-          "5+ Videos (custom length)",
-          "Cinema-grade color grading",
-          "Custom sound design & music",
-          "Unlimited revisions",
-          "Priority delivery",
-          "All platform formats",
-          "Social media content bundle"
-        ]
-      }
-    ]
+    "customCta": "Let's Talk"
   },
   "personalCta": {
     "title": "Let's discuss your next project",
@@ -198,24 +95,6 @@
     "heroSubtitle": "A curated collection of visual narratives crafted with intention, precision, and soul.",
     "clientsOverline": "Trusted By",
     "clientsTitle": "Brands we've worked with",
-    "stats": {
-      "projects": {
-        "value": "50+",
-        "label": "Projects Delivered"
-      },
-      "industries": {
-        "value": "12",
-        "label": "Industries Served"
-      },
-      "retention": {
-        "value": "98%",
-        "label": "Client Retention"
-      },
-      "views": {
-        "value": "4M+",
-        "label": "Views Generated"
-      }
-    },
     "title": "Our Work",
     "subtitle": "Every project tells a story. Here are ours.",
     "filterAll": "All",

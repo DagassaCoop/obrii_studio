@@ -1,14 +1,12 @@
-import { getTranslations } from "next-intl/server";
+import { client } from "@/lib/sanity/client";
+import { siteSettingsQuery } from "@/lib/sanity/queries";
+import { SanitySiteSettings } from "@/lib/sanity/types";
 
 export async function PortfolioStats() {
-  const t = await getTranslations("portfolio");
+  const settings: SanitySiteSettings | null = await client.fetch(siteSettingsQuery);
+  const stats = settings?.portfolioStats ?? [];
 
-  const stats = [
-    { value: t("stats.projects.value"), label: t("stats.projects.label") },
-    { value: t("stats.industries.value"), label: t("stats.industries.label") },
-    { value: t("stats.retention.value"), label: t("stats.retention.label") },
-    { value: t("stats.views.value"), label: t("stats.views.label") },
-  ];
+  if (stats.length === 0) return null;
 
   return (
     <section className="bg-section-secondary py-10">

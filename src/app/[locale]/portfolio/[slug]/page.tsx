@@ -1,8 +1,8 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
-import { serverClient } from "@/lib/sanity/client";
+import { client } from "@/lib/sanity/client";
 import { projectBySlugQuery, projectsQuery } from "@/lib/sanity/queries";
 import { SanityProject } from "@/lib/sanity/types";
 import { ProjectHero } from "@/components/project/ProjectHero";
@@ -11,9 +11,12 @@ import { ProjectProblemSolution } from "@/components/project/ProjectProblemSolut
 import { ProjectGallery } from "@/components/project/ProjectGallery";
 import { ProjectRelatedWork } from "@/components/project/ProjectRelatedWork";
 
+// Revalidate Sanity-sourced content at most once per minute (ISR).
+export const revalidate = 60;
+
 // Pre-render all known slugs at build time
 export async function generateStaticParams() {
-  const projects: SanityProject[] = await serverClient.fetch(projectsQuery);
+  const projects: SanityProject[] = await client.fetch(projectsQuery);
   return projects.map((p) => ({ slug: p.slug.current }));
 }
 
@@ -22,10 +25,11 @@ interface Props {
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("project");
 
-  const project: SanityProject | null = await serverClient.fetch(
+  const project: SanityProject | null = await client.fetch(
     projectBySlugQuery,
     { slug }
   );
