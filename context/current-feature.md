@@ -1,53 +1,53 @@
 # Current Feature
 
-Sanity Schemas (feature #01)
+Sanity Data Migration (feature #02)
 
 ## Status
 
-Completed
+In Progress
 
 ## Goals
 
-Establish the CMS foundation: create Sanity document schemas for content that
-currently lives hardcoded in JSON translation files. Data layer only — UI
-components are migrated in feature #02.
+Populate the cloud `production` dataset with the content that currently lives
+hardcoded in `src/messages/en.json`, using the schemas created in feature #01.
+Content layer only — UI components still read from JSON and are migrated to read
+from Sanity in a later feature.
 
-- New schemas: `service`, `pricingPackage`, `processStep`, `siteSettings`
-  (singleton), `seo` (singleton).
-- Register all schemas in `src/sanity/schemaTypes/index.ts`.
-- Configure singleton pattern for `siteSettings` and `seo` via structure builder
-  in `sanity.config.ts`.
-- TypeScript interfaces for each schema in `src/lib/sanity/types.ts`.
-- GROQ queries for each schema in `src/lib/sanity/queries.ts`
-  (naming: `{entity}Query`, `{entity}By{Field}Query`).
+Migrate into these document types:
+
+- `service` — 3 docs (video, social, smm)
+- `pricingPackage` — 3 docs (Starter, Professional, Enterprise)
+- `processStep` — 4 docs (Briefing, Production, Post-Production, Delivery)
+- `siteSettings` — 1 singleton (hero*, manifesto*, portfolioStats[], footerTagline, contactEmail)
+- `seo` — 1 singleton (defaultTitle, defaultDescription)
+
+## Approach
+
+- Reproducible seed script: `scripts/seed-sanity.ts`.
+- Uses `@sanity/client` with `SANITY_API_WRITE_TOKEN` (write access).
+- Idempotent: `createOrReplace` with deterministic `_id`s so re-runs don't
+  duplicate (e.g. `service-video`, `pricingPackage-starter`, `siteSettings`,
+  `seo`).
+- Run via `npm run seed:sanity`.
+- Source values mirror `src/messages/en.json` exactly (English content only —
+  Sanity content is not translated).
 
 ## Notes
 
-- Follow the existing `project.ts` pattern (`defineField` / `defineType`).
-- Field shapes mirror current JSON in `src/messages/en.json` so feature #02 can
-  populate Studio with matching values:
-  - service: title, description, features[], icon, order, slug
-  - pricingPackage: name, price, description, features[], popular, order
-  - processStep: number, title, description, order
-  - siteSettings: hero*, manifesto*, portfolioStats[{value,label}], clientLogos[],
-    footerTagline, contactEmail
-  - seo: defaultTitle, defaultDescription, ogImage, per-page overrides
+- Singletons use fixed `_id`s `siteSettings` and `seo` (matches the structure
+  builder config from feature #01).
+- `order` fields set sequentially so `| order(order asc)` in queries is stable.
+- `slug` for services derived from the category key.
+- Projects are NOT seeded here (real client work, added manually in Studio).
 
 ## History
 
 <!-- Keep this updated. Earliest to latest -->
 
-- Branch `feature/sanity-schemas` created off `main`.
-- Created schemas: `service`, `pricingPackage`, `processStep`, `siteSettings`,
-  `seo` (following `project.ts` `defineField`/`defineType` pattern).
-- Registered all schemas in `src/sanity/schemaTypes/index.ts`.
-- Configured singleton pattern for `siteSettings` and `seo` in `sanity.config.ts`
-  (custom structure list + filtered templates/actions).
-- Added TypeScript interfaces in `src/lib/sanity/types.ts`.
-- Added GROQ queries in `src/lib/sanity/queries.ts` (`servicesQuery`,
-  `pricingPackagesQuery`, `processStepsQuery`, `siteSettingsQuery`, `seoQuery`).
-- `npm run build` passes.
-- Deployed schema manifest to Sanity cloud (`sanity schema deploy`) and the
-  hosted Studio (`sanity deploy`) at https://obrii.sanity.studio/ — project
-  `kcffnd7i`, dataset `production`.
-- Feature completed and merged to `main`.
+- Branch `feature/sanity-data-migration` created off `main`.
+- Added `scripts/seed-sanity.ts` (idempotent `createOrReplace`, deterministic
+  `_id`s) and `npm run seed:sanity` (tsx + `--env-file=.env.local`). Added `tsx`
+  to devDependencies.
+- `npm run build` passes; seed script typechecks clean.
+- Ran seed: 12 documents created in cloud `production` (3 services, 3 pricing
+  packages, 4 process steps, siteSettings + seo singletons). Verified via GROQ.
