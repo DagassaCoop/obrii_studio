@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import {
   Card,
@@ -8,17 +8,13 @@ import {
 } from "@/components/ui/foundation/card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Check } from "lucide-react";
+import { serverClient } from "@/lib/sanity/client";
+import { pricingPackagesQuery } from "@/lib/sanity/queries";
+import { SanityPricingPackage } from "@/lib/sanity/types";
 
-export function Pricing() {
-  const t = useTranslations("pricing");
-
-  const packages = t.raw("packages") as Array<{
-    name: string;
-    price: string;
-    description: string;
-    features: string[];
-    popular?: boolean;
-  }>;
+export async function Pricing() {
+  const t = await getTranslations("pricing");
+  const packages: SanityPricingPackage[] = await serverClient.fetch(pricingPackagesQuery);
 
   return (
     <section className="relative py-32 bg-section-secondary">
@@ -30,9 +26,9 @@ export function Pricing() {
         />
 
         <div className="flex gap-6">
-          {packages.map((pkg, index) => (
+          {packages.map((pkg) => (
             <Card
-              key={index}
+              key={pkg._id}
               className={`flex-1 border-terracotta transition-shadow duration-500 hover:shadow-[0_2px_0_0_rgba(176,79,70)] flex flex-col ${pkg.popular ? "-mt-10 -mb-5 z-10" : ""
                 }`}
             >
@@ -70,7 +66,7 @@ export function Pricing() {
 
                 {/* Feature list — terracotta checkmarks */}
                 <ul className="flex-1 space-y-3">
-                  {pkg.features.map((feature, i) => (
+                  {(pkg.features ?? []).map((feature, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-graphite/65">
                       <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-terracotta/70" strokeWidth={2} />
                       {feature}

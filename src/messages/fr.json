@@ -17,52 +17,13 @@
     "tagline": "Du contenu au-delà du cadre."
   },
   "hero": {
-    "overline": "Studio Créatif",
-    "headline": "Nous créons des histoires visuelles qui",
-    "accent": "résonnent",
-    "subheadline": "Une agence boutique de production vidéo et de médias sociaux dédiée à l'élévation des marques par un artisanat méticuleux et une esthétique intemporelle.",
     "ctaPrimary": "Voir Nos Projets",
     "ctaSecondary": "Notre Processus"
-  },
-  "manifesto": {
-    "title": "Notre Philosophie",
-    "heading": "L'art est dans la contrainte",
-    "text": "Chaque marque a une histoire qui mérite d'être racontée. Nous ne produisons pas simplement du contenu — nous sculptons des expériences visuelles qui résonnent, inspirent et convertissent. Dans un monde noyé dans le bruit, nous créons le signal."
   },
   "services": {
     "overline": "Services",
     "title": "Ce que nous faisons",
-    "subtitle": "Des services conçus avec précision pour les marques qui exigent l'excellence.",
-    "video": {
-      "title": "Production Vidéo",
-      "description": "Du concept au montage final. Films commerciaux, vidéos de marque, présentations de produits et couverture d'événements qui captivent votre audience.",
-      "features": [
-        "Films de Marque & Commerciaux",
-        "Présentations de Produits",
-        "Couverture d'Événements",
-        "Motion Graphics"
-      ]
-    },
-    "social": {
-      "title": "Contenu Réseaux Sociaux",
-      "description": "Du contenu conçu pour capter l'attention. Reels, stories et publications pensés pour développer votre présence digitale.",
-      "features": [
-        "Instagram Reels & Stories",
-        "Contenu TikTok",
-        "YouTube Shorts",
-        "Calendriers de Contenu"
-      ]
-    },
-    "smm": {
-      "title": "Gestion des Réseaux Sociaux",
-      "description": "Stratégie complète sur les réseaux sociaux. Nous planifions, créons, publions et analysons — pour que vous puissiez vous concentrer sur votre activité.",
-      "features": [
-        "Stratégie & Planification",
-        "Gestion de Communauté",
-        "Analytique & Rapports",
-        "Support Campagnes Pub"
-      ]
-    }
+    "subtitle": "Des services conçus avec précision pour les marques qui exigent l'excellence."
   },
   "featuredWork": {
     "overline": "Projets",
@@ -74,29 +35,7 @@
   "process": {
     "overline": "Processus",
     "title": "La couche de transparence",
-    "subtitle": "Un workflow transparent et collaboratif conçu pour livrer des résultats.",
-    "steps": [
-      {
-        "number": "1",
-        "title": "Briefing",
-        "description": "Nous écoutons. Comprendre vos objectifs, votre audience et votre vision est la base de tout grand projet."
-      },
-      {
-        "number": "2",
-        "title": "Production",
-        "description": "Les caméras tournent. Notre équipe donne vie à la vision créative avec un équipement professionnel et une direction expérimentée."
-      },
-      {
-        "number": "3",
-        "title": "Post-Production",
-        "description": "La magie opère. Montage, étalonnage, design sonore et motion graphics transforment les rushes en œuvre d'art."
-      },
-      {
-        "number": "4",
-        "title": "Livraison",
-        "description": "Prêt au lancement. Fichiers finaux optimisés pour chaque plateforme, avec des révisions jusqu'à votre entière satisfaction."
-      }
-    ]
+    "subtitle": "Un workflow transparent et collaboratif conçu pour livrer des résultats."
   },
   "pricing": {
     "overline": "Tarifs",
@@ -106,49 +45,7 @@
     "currency": "$",
     "cta": "Commencer",
     "custom": "Besoin de quelque chose sur mesure ?",
-    "customCta": "Parlons-en",
-    "packages": [
-      {
-        "name": "Starter",
-        "price": "1 500",
-        "description": "Parfait pour les petites entreprises qui débutent avec la vidéo.",
-        "features": [
-          "1 Vidéo (jusqu'à 60 secondes)",
-          "Étalonnage de base",
-          "2 tours de révision",
-          "Livraison en 7 jours",
-          "1 format de plateforme"
-        ]
-      },
-      {
-        "name": "Professionnel",
-        "price": "3 500",
-        "popular": true,
-        "description": "Pour les marques prêtes à faire une impression.",
-        "features": [
-          "3 Vidéos (jusqu'à 90 sec. chacune)",
-          "Étalonnage professionnel",
-          "Design sonore & musique",
-          "3 tours de révision",
-          "Livraison en 14 jours",
-          "Formats multi-plateformes"
-        ]
-      },
-      {
-        "name": "Entreprise",
-        "price": "7 000",
-        "description": "Production à grande échelle pour les marques sérieuses.",
-        "features": [
-          "5+ Vidéos (durée personnalisée)",
-          "Étalonnage cinématographique",
-          "Design sonore & musique sur mesure",
-          "Révisions illimitées",
-          "Livraison prioritaire",
-          "Tous les formats de plateforme",
-          "Bundle contenu réseaux sociaux"
-        ]
-      }
-    ]
+    "customCta": "Parlons-en"
   },
   "personalCta": {
     "title": "Parlons de votre prochain projet",
@@ -198,24 +95,6 @@
     "heroSubtitle": "Une collection curatée de récits visuels créés avec intention, précision et âme.",
     "clientsOverline": "Ils nous font confiance",
     "clientsTitle": "Marques avec lesquelles nous avons travaillé",
-    "stats": {
-      "projects": {
-        "value": "50+",
-        "label": "Projets Livrés"
-      },
-      "industries": {
-        "value": "12",
-        "label": "Industries Servies"
-      },
-      "retention": {
-        "value": "98%",
-        "label": "Fidélisation Clients"
-      },
-      "views": {
-        "value": "4M+",
-        "label": "Vues Générées"
-      }
-    },
     "title": "Nos Réalisations",
     "subtitle": "Chaque projet raconte une histoire. Voici les nôtres.",
     "filterAll": "Tous",

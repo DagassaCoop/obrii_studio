@@ -1,18 +1,22 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/foundation/card";
-import { Video, Share2, BarChart3 } from "lucide-react";
+import { Video, Share2, BarChart3, TrendingUp, type LucideIcon } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { serverClient } from "@/lib/sanity/client";
+import { servicesQuery } from "@/lib/sanity/queries";
+import { SanityService } from "@/lib/sanity/types";
 
-const serviceIcons = {
-  video: Video,
-  social: Share2,
-  smm: BarChart3,
-} as const;
+// Resolves the Lucide icon name stored in Sanity to its component.
+const serviceIcons: Record<string, LucideIcon> = {
+  Video,
+  Share2,
+  BarChart3,
+  TrendingUp,
+};
 
-const serviceKeys = ["video", "social", "smm"] as const;
-
-export function Services() {
-  const t = useTranslations("services");
+export async function Services() {
+  const t = await getTranslations("services");
+  const services: SanityService[] = await serverClient.fetch(servicesQuery);
 
   return (
     <section className="relative py-32">
@@ -24,13 +28,13 @@ export function Services() {
         />
 
         <div className="grid gap-6 md:grid-cols-3">
-          {serviceKeys.map((key) => {
-            const Icon = serviceIcons[key];
-            const features: string[] = t.raw(`${key}.features`);
+          {services.map((service) => {
+            const Icon = (service.icon && serviceIcons[service.icon]) || Video;
+            const features = service.features ?? [];
 
             return (
               <Card
-                key={key}
+                key={service._id}
                 className="border-terracotta transition-shadow duration-500 hover:shadow-[0_2px_0_0_rgba(176,79,70)]"
               >
                 <CardHeader>
@@ -38,13 +42,13 @@ export function Services() {
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-warm-mist">
                     <Icon className="h-5 w-5 text-graphite/70" strokeWidth={1.5} />
                   </div>
-                  <CardTitle>{t(`${key}.title`)}</CardTitle>
+                  <CardTitle>{service.title}</CardTitle>
                 </CardHeader>
 
                 <CardContent>
                   {/* Description — visually secondary */}
                   <p className="mb-4 text-sm leading-relaxed text-graphite/50">
-                    {t(`${key}.description`)}
+                    {service.description}
                   </p>
 
                   {/* Divider — separates description from features */}

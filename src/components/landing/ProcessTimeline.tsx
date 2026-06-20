@@ -1,15 +1,12 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { serverClient } from "@/lib/sanity/client";
+import { processStepsQuery } from "@/lib/sanity/queries";
+import { SanityProcessStep } from "@/lib/sanity/types";
 
-export function ProcessTimeline() {
-  const t = useTranslations("process");
-
-  const steps = [
-    t.raw("steps.0"),
-    t.raw("steps.1"),
-    t.raw("steps.2"),
-    t.raw("steps.3"),
-  ] as Array<{ number: string; title: string; description: string }>;
+export async function ProcessTimeline() {
+  const t = await getTranslations("process");
+  const steps: SanityProcessStep[] = await serverClient.fetch(processStepsQuery);
 
   return (
     <section className="relative py-32">
@@ -25,8 +22,8 @@ export function ProcessTimeline() {
           <div className="absolute left-0 right-0 top-8 hidden h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent md:block" />
 
           <div className="grid gap-8 md:grid-cols-4">
-            {steps.map((step, index) => (
-              <div key={index} className="relative text-center">
+            {steps.map((step) => (
+              <div key={step._id} className="relative text-center">
                 {/* Step number */}
                 <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 flex items-center justify-center rounded-full border bg-background">
                   <span className="text-2xl text-primary font-light">{step.number}</span>
