@@ -6,7 +6,7 @@ See full spec: `context/features/02-landing-sanity-migration.md`
 
 ## Status
 
-In Progress
+Completed
 
 ## Goals
 
