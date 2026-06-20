@@ -4,7 +4,7 @@ Sanity Schemas (feature #01)
 
 ## Status
 
-In Progress
+Completed
 
 ## Goals
 
@@ -47,3 +47,7 @@ components are migrated in feature #02.
 - Added GROQ queries in `src/lib/sanity/queries.ts` (`servicesQuery`,
   `pricingPackagesQuery`, `processStepsQuery`, `siteSettingsQuery`, `seoQuery`).
 - `npm run build` passes.
+- Deployed schema manifest to Sanity cloud (`sanity schema deploy`) and the
+  hosted Studio (`sanity deploy`) at https://obrii.sanity.studio/ — project
+  `kcffnd7i`, dataset `production`.
+- Feature completed and merged to `main`.
