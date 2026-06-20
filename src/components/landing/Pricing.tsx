@@ -8,13 +8,13 @@ import {
 } from "@/components/ui/foundation/card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Check } from "lucide-react";
-import { serverClient } from "@/lib/sanity/client";
+import { client } from "@/lib/sanity/client";
 import { pricingPackagesQuery } from "@/lib/sanity/queries";
 import { SanityPricingPackage } from "@/lib/sanity/types";
 
 export async function Pricing() {
   const t = await getTranslations("pricing");
-  const packages: SanityPricingPackage[] = await serverClient.fetch(pricingPackagesQuery);
+  const packages: SanityPricingPackage[] = await client.fetch(pricingPackagesQuery);
 
   return (
     <section className="relative py-32 bg-section-secondary">

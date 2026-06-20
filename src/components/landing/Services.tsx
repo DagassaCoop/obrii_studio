@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/foundation/card";
 import { Video, Share2, BarChart3, TrendingUp, type LucideIcon } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { serverClient } from "@/lib/sanity/client";
+import { client } from "@/lib/sanity/client";
 import { servicesQuery } from "@/lib/sanity/queries";
 import { SanityService } from "@/lib/sanity/types";
 
@@ -16,7 +16,7 @@ const serviceIcons: Record<string, LucideIcon> = {
 
 export async function Services() {
   const t = await getTranslations("services");
-  const services: SanityService[] = await serverClient.fetch(servicesQuery);
+  const services: SanityService[] = await client.fetch(servicesQuery);
 
   return (
     <section className="relative py-32">

@@ -62,3 +62,11 @@ SEO singleton migration is deferred to a later feature.
   `.claude/**` to ESLint ignores (Sanity build output was OOM-ing lint).
   `npm run build` + `npm run lint` (0 errors) pass; verified rendered HTML on
   `/en`, `/en/portfolio`, `/fr`.
+- 2026-06-19 / Fix DYNAMIC_SERVER_USAGE — `/portfolio/[slug]` 500'd in production:
+  the route is statically generated (`generateStaticParams`) but next-intl had no
+  `setRequestLocale`, so `getMessages`/`getTranslations` used dynamic `headers()`
+  during static render. Enabled static rendering: `setRequestLocale` in the locale
+  layout + pages, locale `generateStaticParams` in the layout, ISR
+  `export const revalidate = 60` on home/portfolio/[slug], and switched public
+  Sanity reads from authenticated `serverClient` to the cacheable CDN `client`.
+  All routes now prerender (SSG + ISR); unknown slug returns 404 (was 500).

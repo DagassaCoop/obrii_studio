@@ -1,12 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { serverClient } from "@/lib/sanity/client";
+import { client } from "@/lib/sanity/client";
 import { siteSettingsQuery } from "@/lib/sanity/queries";
 import { SanitySiteSettings } from "@/lib/sanity/types";
 
 export async function Hero() {
   const t = await getTranslations("hero");
-  const settings: SanitySiteSettings | null = await serverClient.fetch(siteSettingsQuery);
+  const settings: SanitySiteSettings | null = await client.fetch(siteSettingsQuery);
 
   return (
     <section className="bg-section-primary min-h-[100vh] flex items-center">

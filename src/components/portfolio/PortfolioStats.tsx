@@ -1,9 +1,9 @@
-import { serverClient } from "@/lib/sanity/client";
+import { client } from "@/lib/sanity/client";
 import { siteSettingsQuery } from "@/lib/sanity/queries";
 import { SanitySiteSettings } from "@/lib/sanity/types";
 
 export async function PortfolioStats() {
-  const settings: SanitySiteSettings | null = await serverClient.fetch(siteSettingsQuery);
+  const settings: SanitySiteSettings | null = await client.fetch(siteSettingsQuery);
   const stats = settings?.portfolioStats ?? [];
 
   if (stats.length === 0) return null;

@@ -1,10 +1,10 @@
 import { SectionHeading } from "../ui/SectionHeading";
-import { serverClient } from "@/lib/sanity/client";
+import { client } from "@/lib/sanity/client";
 import { siteSettingsQuery } from "@/lib/sanity/queries";
 import { SanitySiteSettings } from "@/lib/sanity/types";
 
 export async function Manifesto() {
-  const settings: SanitySiteSettings | null = await serverClient.fetch(siteSettingsQuery);
+  const settings: SanitySiteSettings | null = await client.fetch(siteSettingsQuery);
 
   return (
     <section className="relative py-24 bg-section-secondary">

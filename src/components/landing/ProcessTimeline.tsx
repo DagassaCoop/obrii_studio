@@ -1,12 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { serverClient } from "@/lib/sanity/client";
+import { client } from "@/lib/sanity/client";
 import { processStepsQuery } from "@/lib/sanity/queries";
 import { SanityProcessStep } from "@/lib/sanity/types";
 
 export async function ProcessTimeline() {
   const t = await getTranslations("process");
-  const steps: SanityProcessStep[] = await serverClient.fetch(processStepsQuery);
+  const steps: SanityProcessStep[] = await client.fetch(processStepsQuery);
 
   return (
     <section className="relative py-32">
